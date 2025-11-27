@@ -323,45 +323,6 @@ refactor: 重构内容
 
 ---
 
-## 📝 文档维护
-
-### 更新时机
-
-- ✅ 新功能发布时
-- ✅ 重大更新时
-- ✅ 发现文档错误时
-- ✅ 用户反馈需求时
-
-### 文档检查清单
-
-- [ ] 内容准确性
-- [ ] 代码示例可运行
-- [ ] 链接有效性
-- [ ] 中文表达流畅
-- [ ] 格式统一规范
-
----
-
-## 📄 许可证
-
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
-
----
-
-## 🙏 致谢
-
-- [Anthropic](https://www.anthropic.com/) - Claude Code 开发团队
-- 所有贡献者和使用者
-
----
-
-## 📮 联系方式
-
-- **问题反馈**：[GitHub Issues](https://github.com/YOUR_USERNAME/claude-code-guide/issues)
-- **功能建议**：[GitHub Discussions](https://github.com/YOUR_USERNAME/claude-code-guide/discussions)
-
----
-
 <div align="center">
 
 **⭐ 如果这个项目对你有帮助，请给个 Star！**
