@@ -67,6 +67,7 @@ claude
 | [**基础使用手册**](basic-guide.md) | 安装、配置、Mode 切换、文件操作、基本命令 | 新手入门 |
 | [**进阶使用手册**](advanced-guide.md) | Skill、MCP、Hooks、自动编程、Agent SDK | 进阶用户 |
 | [**最佳实践**](best-practices.md) | Token 优化、安全性、团队协作、性能调优 | 所有用户 |
+| [**安全使用手册**](security-guide.md) | 敏感信息保护、权限安全、代码审查、应急响应 | ⭐ 必读 |
 
 ### 📂 专题指南
 
@@ -96,10 +97,16 @@ claude
 - [自动编程](advanced-guide.md#自动编程工作流) - 自动化开发流程
 - [Agent SDK](advanced-guide.md#agent-sdk-开发) - 开发自定义 Agent
 
+#### 安全使用
+- [敏感信息保护](security-guide.md#敏感信息保护) - 环境变量、密钥管理、泄露检测
+- [权限配置安全](security-guide.md#权限配置安全) - 安全权限模板、验证脚本
+- [代码审查安全](security-guide.md#代码审查安全) - SQL注入、XSS、命令注入检查
+- [命令执行安全](security-guide.md#命令执行安全) - 危险命令拦截、审计日志
+- [应急响应](security-guide.md#应急响应) - 密钥泄露处理、事件报告
+
 #### 优化与实践
 - [Token 优化](best-practices.md#token-使用优化) - 10 个 Token 节省策略
 - [提示词技巧](best-practices.md#提示词最佳实践) - 编写高效提示词
-- [安全性](best-practices.md#安全性最佳实践) - 保护敏感信息
 - [团队协作](best-practices.md#团队协作规范) - 多人协作配置
 - [问题排查](best-practices.md#调试和问题排查) - 常见问题解决
 
