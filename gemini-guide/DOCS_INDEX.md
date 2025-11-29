@@ -10,7 +10,9 @@
 |------|------|----------|--------------|
 | [README.md](./README.md) | 项目介绍和快速开始 | 所有人 | 5 分钟 |
 | [gemini-cli-best-practices.md](./gemini-cli-best-practices.md) | 完整最佳实践指南 | 开发者 | 30 分钟 |
+| [ARCHITECTURE.md](./ARCHITECTURE.md) | 架构与流程图（Mermaid） | 开发者/架构师 | 20 分钟 |
 | [gemini.md](./gemini.md) | 项目记忆管理方法 | 开发者 | 10 分钟 |
+| [DOCS_INDEX.md](./DOCS_INDEX.md) | 本文档索引 | 所有人 | 3 分钟 |
 
 ## 🎯 学习路径
 
@@ -36,46 +38,59 @@
    - ⏱️ 预计 20 分钟
    - 🎯 为你的项目创建配置文件
 
+5. **理解架构**
+   - 📖 阅读 [架构与流程图](./ARCHITECTURE.md)
+   - ⏱️ 预计 15 分钟
+   - 🎯 了解 Gemini CLI 的工作原理
+
 ### 进阶使用（第 3-7 天）
 
-5. **上下文管理**
+6. **上下文管理**
    - 📖 阅读 [项目上下文管理](./gemini.md)
    - ⏱️ 预计 15 分钟
    - 🎯 学习如何为项目添加记忆功能
 
-6. **提示词优化**
+7. **提示词优化**
    - 📖 阅读 [高效提示词技巧](./gemini-cli-best-practices.md#高效提示词技巧)
    - ⏱️ 预计 20 分钟
    - 🎯 掌握编写高质量提示词的方法
 
-7. **工作流程**
+8. **工作流程**
    - 📖 阅读 [工作流程最佳实践](./gemini-cli-best-practices.md#工作流程最佳实践)
    - ⏱️ 预计 25 分钟
    - 🎯 建立高效的开发工作流
 
-8. **实用脚本**
+9. **实用脚本**
    - 📖 阅读 [实用脚本与工具](./gemini-cli-best-practices.md#实用脚本与工具)
    - ⏱️ 预计 30 分钟
    - 🎯 使用脚本自动化常见任务
 
 ### 高级技巧（第 8-14 天）
 
-9. **MCP 服务器集成**
-   - 📖 阅读 [MCP 服务器集成](./gemini-cli-best-practices.md#mcp-服务器集成)
-   - ⏱️ 预计 40 分钟
-   - 🎯 扩展 Gemini CLI 功能
+10. **MCP 服务器集成**
+    - 📖 阅读 [MCP 服务器集成](./gemini-cli-best-practices.md#mcp-服务器集成)
+    - ⏱️ 预计 40 分钟
+    - 🎯 扩展 Gemini CLI 功能
 
-10. **性能优化**
+11. **性能优化**
     - 📖 阅读 [性能优化技巧](./gemini-cli-best-practices.md#性能优化技巧)
     - ⏱️ 预计 15 分钟
     - 🎯 提升使用效率和响应速度
 
-11. **问题排查**
+12. **问题排查**
     - 📖 阅读 [常见问题与解决方案](./gemini-cli-best-practices.md#常见问题与解决方案)
     - ⏱️ 预计 20 分钟
     - 🎯 快速解决常见问题
 
 ## 📚 按主题查找
+
+### 架构与原理
+
+- [整体架构图](./ARCHITECTURE.md#整体架构)
+- [工作流程](./ARCHITECTURE.md#工作流程)
+- [GEMINI.md 加载机制](./ARCHITECTURE.md#geminimd-加载机制)
+- [MCP 集成架构](./ARCHITECTURE.md#mcp-集成架构)
+- [性能优化流程](./ARCHITECTURE.md#性能优化流程)
 
 ### 安装配置
 
@@ -132,12 +147,15 @@
 
 | 需求 | 推荐阅读 |
 |------|----------|
+| 了解工作原理 | [整体架构图](./ARCHITECTURE.md#整体架构) |
+| 理解配置加载 | [GEMINI.md 加载机制](./ARCHITECTURE.md#geminimd-加载机制) |
 | 安装 Gemini CLI | [安装与配置](./gemini-cli-best-practices.md#安装与配置) |
 | 为项目创建配置 | [GEMINI.md 配置](./gemini-cli-best-practices.md#geminimd-配置最佳实践) |
 | 让 AI 记住项目信息 | [项目上下文管理](./gemini.md) |
 | 提高提示词质量 | [提示词技巧](./gemini-cli-best-practices.md#高效提示词技巧) |
 | 自动生成提交信息 | [自动提交脚本](./gemini-cli-best-practices.md#1-自动提交工作流脚本) |
 | 集成 GitHub | [GitHub MCP](./gemini-cli-best-practices.md#github-mcp-服务器示例) |
+| 理解 MCP 架构 | [MCP 集成架构](./ARCHITECTURE.md#mcp-集成架构) |
 | 优化性能 | [性能优化](./gemini-cli-best-practices.md#性能优化技巧) |
 | 解决报错 | [常见问题](./gemini-cli-best-practices.md#常见问题与解决方案) |
 
@@ -145,15 +163,17 @@
 
 ### 文档规模
 
-- **总文档数**: 3 个主要文档
-- **总字数**: 约 20,000 字
+- **总文档数**: 5 个主要文档
+- **总字数**: 约 25,000 字
 - **代码示例**: 50+ 个
 - **实用脚本**: 10+ 个
+- **架构图表**: 15+ 个（Mermaid）
 
 ### 覆盖内容
 
 - ✅ 安装配置
 - ✅ 基础使用
+- ✅ 架构原理（含流程图）
 - ✅ 进阶技巧
 - ✅ 最佳实践
 - ✅ 工作流程
@@ -172,6 +192,8 @@ README.md
 安装与配置
     ↓
 核心功能与使用
+    ↓
+整体架构图 (了解原理)
     ↓
 GEMINI.md 配置
     ↓
