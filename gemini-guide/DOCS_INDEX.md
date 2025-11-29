@@ -11,6 +11,7 @@
 | [README.md](./README.md) | 项目介绍和快速开始 | 所有人 | 5 分钟 |
 | [gemini-cli-best-practices.md](./gemini-cli-best-practices.md) | 完整最佳实践指南 | 开发者 | 30 分钟 |
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | 架构与流程图（Mermaid） | 开发者/架构师 | 20 分钟 |
+| [PRICING.md](./PRICING.md) | 订阅计划详细对比 | 所有人 | 15 分钟 |
 | [gemini.md](./gemini.md) | 项目记忆管理方法 | 开发者 | 10 分钟 |
 | [DOCS_INDEX.md](./DOCS_INDEX.md) | 本文档索引 | 所有人 | 3 分钟 |
 
@@ -84,6 +85,16 @@
 
 ## 📚 按主题查找
 
+### 订阅与定价
+
+- [免费版详细说明](./PRICING.md#免费版详细说明)
+- [AI Pro 详细对比](./PRICING.md#google-ai-pro-详细说明)
+- [AI Ultra 详细对比](./PRICING.md#google-ai-ultra-详细说明)
+- [API 付费层定价](./PRICING.md#api-付费层详细说明)
+- [企业版方案](./PRICING.md#企业版方案)
+- [成本优化技巧](./PRICING.md#成本优化技巧)
+- [选择建议](./PRICING.md#选择建议)
+
 ### 架构与原理
 
 - [整体架构图](./ARCHITECTURE.md#整体架构)
@@ -147,6 +158,9 @@
 
 | 需求 | 推荐阅读 |
 |------|----------|
+| 了解订阅价格 | [订阅计划对比](./PRICING.md) |
+| 选择合适的计划 | [选择建议](./PRICING.md#选择建议) |
+| 优化 API 成本 | [成本优化技巧](./PRICING.md#成本优化技巧) |
 | 了解工作原理 | [整体架构图](./ARCHITECTURE.md#整体架构) |
 | 理解配置加载 | [GEMINI.md 加载机制](./ARCHITECTURE.md#geminimd-加载机制) |
 | 安装 Gemini CLI | [安装与配置](./gemini-cli-best-practices.md#安装与配置) |
@@ -163,11 +177,12 @@
 
 ### 文档规模
 
-- **总文档数**: 5 个主要文档
-- **总字数**: 约 25,000 字
+- **总文档数**: 6 个主要文档
+- **总字数**: 约 35,000 字
 - **代码示例**: 50+ 个
 - **实用脚本**: 10+ 个
-- **架构图表**: 15+ 个（Mermaid）
+- **架构图表**: 18+ 个（Mermaid）
+- **定价对比**: 20+ 个表格
 
 ### 覆盖内容
 
