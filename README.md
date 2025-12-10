@@ -112,6 +112,7 @@ claude
 - [Mode 切换](basic-guide.md#mode-切换) - Plan Mode vs Build Mode
 
 #### 进阶功能
+- [自定义命令](advanced-guide.md#自定义-slash-commands) - 创建项目专属命令
 - [Skill 系统](advanced-guide.md#skill-系统) - 创建和使用 Skill
 - [MCP 集成](advanced-guide.md#mcp-服务器集成) - 安装配置 MCP 服务器
 - [Hooks 配置](advanced-guide.md#hooks-高级配置) - 自定义执行钩子
