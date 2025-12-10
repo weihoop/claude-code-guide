@@ -99,6 +99,15 @@ claude
   - 5 个实用配置案例
   - 10 个常见问题解答
 
+#### 开发范式与规范
+- [**Claude Code 编程最佳实践**](docs/claude-code-best-practices.md) - 完整的开发规范和工作流
+  - 项目文件组织（.claude.md、SPEC.md、CHANGELOG.md）
+  - 权限配置最佳实践
+  - 10个必备自定义命令详解
+  - 完整的 CI/CD 配置
+  - 测试规范和代码规范
+- [**快速参考卡**](docs/quick-reference.md) - 一页纸速查核心配置和工作流
+
 #### 资源与参考
 - [**官方资源索引**](docs/resources/official-resources.md) - 官方文档、GitHub 仓库、SDK、社区资源
 
@@ -131,6 +140,7 @@ claude
 - [提示词技巧](best-practices.md#提示词最佳实践) - 编写高效提示词
 - [团队协作](best-practices.md#团队协作规范) - 多人协作配置
 - [问题排查](best-practices.md#调试和问题排查) - 常见问题解决
+- [编程范式速查](docs/quick-reference.md) - 核心文件、命令、配置速查表
 
 ---
 
