@@ -8,7 +8,7 @@
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Latest-blue.svg)](https://claude.com/claude-code)
 [![中文文档](https://img.shields.io/badge/语言-中文-red.svg)](README.md)
 
-[快速开始](#快速开始) • [功能特性](#功能特性) • [配置指南](#配置指南) • [官方资源](#官方资源)
+[📖 完整文档索引](docs/INDEX.md) • [🚀 快速开始](#快速开始) • [📚 实战案例](#实战案例) • [🔗 官方资源](#官方资源)
 
 </div>
 
@@ -111,7 +111,22 @@ claude
   - 提升 40%+ 开发效率
 - [**快速参考卡**](docs/quick-reference.md) - 一页纸速查核心配置和工作流
 
+#### 实战案例
+- [**SPEC 实战案例集**](docs/examples/spec-examples.md) - 5种项目类型的完整 SPEC 示例
+  - CLI 工具（代码检查器）
+  - RESTful API（博客系统）
+  - NPM 包（日期处理库）
+  - 数据处理（日志分析）
+  - 实时应用（聊天系统）
+- [**真实项目最佳实践**](docs/examples/real-world-cases.md) - 5个真实项目的完整经验
+  - 运维监控平台（5人团队）
+  - 电商后台系统（8人团队）
+  - 技术博客网站（个人项目）
+  - 数据分析工具（Python）
+  - 开源 NPM 包（社区项目）
+
 #### 资源与参考
+- [**完整文档索引**](docs/INDEX.md) - 按难度、场景、主题分类的完整导航 ⭐
 - [**官方资源索引**](docs/resources/official-resources.md) - 官方文档、GitHub 仓库、SDK、社区资源
 
 ### 🎯 快速查阅
