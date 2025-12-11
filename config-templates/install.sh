@@ -283,7 +283,7 @@ install_commands() {
         if [ -f "$cmd_file" ]; then
             cp "$cmd_file" "$CLAUDE_DIR/commands/"
             chmod 600 "$CLAUDE_DIR/commands/$(basename "$cmd_file")"
-            ((cmd_count++))
+            cmd_count=$((cmd_count + 1))
             log_to_file "INSTALL: commands/$(basename "$cmd_file")"
         fi
     done
