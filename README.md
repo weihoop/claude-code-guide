@@ -144,6 +144,14 @@ bash install.sh
   - 提升 40%+ 开发效率
 - [**快速参考卡**](docs/quick-reference.md) - 一页纸速查核心配置和工作流
 
+#### 性能与优化
+- [**上下文管理最佳实践**](docs/best-practices/context-management.md) - 减少 Token 消耗，提升开发效率
+  - `/compact` vs `/clear` 完整对比
+  - 5 个核心优化方案
+  - 推荐工作流和任务管理策略
+  - 大文件处理和长会话管理
+  - 常见问题解答和快速参考卡片
+
 #### 实战案例
 - [**SPEC 实战案例集**](docs/examples/spec-examples.md) - 5种项目类型的完整 SPEC 示例
   - CLI 工具（代码检查器）
