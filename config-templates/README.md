@@ -306,6 +306,43 @@ chmod 600 ~/.claude/commands/*.md
 - ⭐ 查看 [中文手册](https://github.com/weihoop/claude-code-guide) 了解更多用法
 - ⭐ 项目级配置可以覆盖全局配置
 
+## 📦 发布新版本（维护者）
+
+### 完整发布流程
+
+```bash
+# 1. 提交代码并创建标签
+git add -A && git commit -m "fix: 修复说明"
+git tag -a v1.x.0 -m "v1.x.0 - 版本说明"
+git push origin main && git push origin v1.x.0
+
+# 2. 创建配置包
+mkdir -p /tmp/claude-config
+cp -r config-templates/* /tmp/claude-config/
+cp -r config-templates/.claude /tmp/claude-config/
+cd /tmp && tar -czvf claude-config.tar.gz claude-config
+
+# 3. 使用 GitHub API 创建 Release 并上传
+export TOKEN="your_github_token"
+
+# 创建 Release（保存返回的 id）
+curl -s -X POST \
+  -H "Authorization: token $TOKEN" \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/weihoop/claude-code-guide/releases \
+  -d '{"tag_name": "v1.x.0", "name": "Claude Code 配置包 v1.x.0", "body": "Release 内容"}'
+
+# 上传配置包（替换 RELEASE_ID）
+curl -s -X POST \
+  -H "Authorization: token $TOKEN" \
+  -H "Content-Type: application/gzip" \
+  --data-binary @/tmp/claude-config.tar.gz \
+  "https://uploads.github.com/repos/weihoop/claude-code-guide/releases/RELEASE_ID/assets?name=claude-config.tar.gz"
+```
+
+### Token 获取
+访问 https://github.com/settings/tokens/new，勾选 `repo` 权限。
+
 ## 🤝 反馈与贡献
 
 如有问题或建议，欢迎在 [GitHub Issues](https://github.com/weihoop/claude-code-guide/issues) 提出。
