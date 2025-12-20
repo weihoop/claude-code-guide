@@ -53,6 +53,7 @@
 - 提交信息清晰描述改动内容
 - 不使用 emoji 表情符号
 - 使用祈使语气，如"添加"而不是"添加了"
+- 禁用 Claude 署名：提交时不添加 "🤖 Generated with Claude Code" 和 "Co-Authored-By: Claude" 信息
 
 ### 项目配置文件
 
