@@ -238,6 +238,52 @@ bash install.sh
 
 ---
 
+## 🧩 Skills 技能系统
+
+Skills 是 Claude Code 最强大的扩展机制，让 Claude 自动执行专业化的工作流。
+
+### 什么是 Skills？
+
+| 特性 | 说明 |
+|------|------|
+| **自动触发** | Claude 根据上下文自动激活相关 skill |
+| **渐进式加载** | 按需加载，节省 Token |
+| **跨平台** | Claude.ai、Claude Code、API 通用 |
+
+### Skills vs MCP vs Slash Commands
+
+| 特性 | Skills | MCP | Slash Commands |
+|------|--------|-----|----------------|
+| 触发方式 | 自动 | 手动 | 手动输入 /xxx |
+| 关注点 | 流程方法 | 外部访问 | 快捷操作 |
+| Token 效率 | 高 | 中 | 低 |
+
+### 安装 Skill
+
+```bash
+# 1. 创建 skills 目录
+mkdir -p ~/.claude/skills/
+
+# 2. 复制 skill 到目录
+cp -r my-skill ~/.claude/skills/
+
+# 3. 启动 Claude Code，自动加载
+claude
+```
+
+### 热门 Skills 推荐
+
+| Skill | 用途 | 来源 |
+|-------|------|------|
+| [docx/pdf/pptx](https://github.com/anthropics/skills) | 文档处理 | 官方 |
+| [mcp-builder](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/mcp-builder) | 创建 MCP 服务器 | 社区 |
+| [skill-creator](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/skill-creator) | 创建新 skill | 社区 |
+| [webapp-testing](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/webapp-testing) | Playwright 测试 | 社区 |
+
+👉 **[查看完整 Skills 指南](skills.md)** - 从 0 到 1 学习、编程使用、创建自定义 Skill
+
+---
+
 ## ⚙️ 配置指南
 
 ### 全局配置文件
