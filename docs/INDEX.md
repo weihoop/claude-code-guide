@@ -309,6 +309,7 @@ SPEC 范式 → 实战案例 → 真实项目 → 安全手册 → Agent 开发
 
 #### 资源与参考
 - [官方资源索引](resources/official-resources.md)
+- [Claude Code 使用限制变化记录（2026年1月）](claude-code-usage-limits-jan-2026.md)
 
 ---
 
