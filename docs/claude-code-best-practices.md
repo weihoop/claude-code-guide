@@ -1092,6 +1092,61 @@ claude
 
 ---
 
+## 🛠 编辑器集成与 LSP
+
+### 何时启用 LSP
+- 当仓库体量较大、需要精确引用/定义跳转或希望在 Claude Code 内直接定位符号时，再启用 LSP 能显著提高效率，平常轻量对话可继续沿用 `Glob`/`Grep`。
+- 启动前确认项目语言（Python、TS/JS、Go）是否在 `.claude/cclsp.json` 中声明，避免多余 server 依赖。
+
+### 启用配置
+1. 启动 Claude 时在外层加入 `ENABLE_LSP_TOOLS=1` 环境变量。
+2. 在 `~/.claude/cclsp.json` 中声明 language server：
+
+```json
+{
+  "servers": [
+    {
+      "extensions": ["js", "ts", "jsx", "tsx"],
+      "command": ["npx", "typescript-language-server", "--stdio"],
+      "rootDir": "."
+    },
+    {
+      "extensions": ["py", "pyi"],
+      "command": ["uvx", "--from", "python-lsp-server", "pylsp"],
+      "rootDir": "."
+    },
+    {
+      "extensions": ["go"],
+      "command": ["gopls"],
+      "rootDir": "."
+    }
+  ]
+}
+```
+
+3. 仅列出当前项目需要的 language server，避免多余拓展。文件名匹配由 `extensions` 控制。
+
+### 推荐语言组合及安装说明
+- **TypeScript/JavaScript**：遵循你偏好的 Node 安装方式（建议全局 `npm install -g typescript-language-server typescript`），也可通过 `npx typescript-language-server --stdio` 临时启动；验证：`typescript-language-server --version`。
+- **Python**：推荐 `uvx --from python-lsp-server pylsp` 或直接 `pip install python-lsp-server` 后执行 `pylsp`；验证：`uvx --from python-lsp-server pylsp --help`。
+- **Go**：安装 `gopls`（`go install golang.org/x/tools/gopls@latest`）并确认 `gopls version` 输出正常；配合 monorepo 时根据模块设置 `rootDir`。
+
+### 在 Claude Code 中使用 LSP
+- 描述性提示词，例如：
+  - “在 `src/main.ts` 中查找 `renderPage` 的所有引用。”
+  - “帮我列出 `handlers/auth.py` 中 `generate_token` 的定义及被哪些文件调用。”
+  - “这个 `greet` 函数在哪些 Go 文件里被引用？”
+- 输出期望包括路径 + 行号，便于 Claude 直接定位；如果结果未返回，先确认语义对象存在且文件在扫描许可列表内。
+
+### 排错与维护
+- **Server 无法启动**：检查 `node`/`python`/`go` 所在路径是否在 `PATH`，`nvm`/`pyenv` 等版本管理器是否正确激活。
+- **位置不对**：确认 `rootDir` 指向 monorepo 的实际项目根，或根据不同模块配置多个 server。
+- **依赖缺失**：使用 `npm install -g` / `pip install` / `go install` 补全依赖；确认 `type-check`/`build` 命令在本地可运行。
+- **不想启用**：可删除 `~/.claude/cclsp.json` 或移除 `ENABLE_LSP_TOOLS=1` 环境变量以还原默认行为。
+
+### 导航提示
+- 本节内容会在 `docs/INDEX.md` 中新增“LSP / 编辑器集成”入口，并在 `README.md` 的最佳实践导航处补充指向本节的链接。以便团队更快找到相关配置。
+
 ## 📚 参考资源
 
 - [Keep a Changelog](https://keepachangelog.com/)

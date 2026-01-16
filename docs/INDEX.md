@@ -32,10 +32,12 @@
 
 | 文档 | 内容概述 | 适用场景 |
 |------|---------|----------|
+| [**Claude Code 完整指南（v2.0+）**](claude-code-v3-complete-guide.md) | LSP、CLAUDE.md、MCP、Skills、Context7 完整体系 | 系统学习 ⭐ |
 | [**进阶使用手册**](../advanced-guide.md) | Skill、MCP、Hooks、Agent SDK | 深度定制 |
 | [**自定义命令详解**](../advanced-guide.md#自定义-slash-commands) | 创建项目专属命令 | 工作流自动化 |
 | [**权限配置完整指南**](configuration/permissions.md) | 细粒度权限控制、10+ 配置案例 | 团队协作 |
 | [**Claude Code 编程最佳实践**](claude-code-best-practices.md) | 15种核心实践、10个必备命令 | 规范开发 |
+| [**LSP / 编辑器集成**](claude-code-best-practices.md#编辑器集成与-lsp) | LSP 启动、常用 server 与 Claude 提示范式 | 提高调试与引用定位效率 |
 | [**最佳实践手册**](../best-practices.md) | Token 优化、提示词技巧、团队协作 | 效率提升 |
 
 **学习路径**：
@@ -200,6 +202,7 @@ SPEC 范式 → 实战案例 → 真实项目 → 安全手册 → Agent 开发
 
 | 主题 | 文档链接 | 说明 |
 |------|---------|------|
+| **完整配置指南** | [Claude Code 完整指南](claude-code-v3-complete-guide.md) | LSP、CLAUDE.md、MCP、Hooks 全覆盖 ⭐ |
 | **.claude.md** | [编程最佳实践](claude-code-best-practices.md#项目配置文件claudemd) | 项目上下文配置 |
 | **权限配置** | [权限配置指南](configuration/permissions.md) | settings.json 详解 |
 | **自定义命令** | [全局配置](getting-started/global-configuration.md#自定义命令) | commands/*.md 创建 |
@@ -299,6 +302,7 @@ SPEC 范式 → 实战案例 → 真实项目 → 安全手册 → Agent 开发
 - [权限配置完整指南](configuration/permissions.md)
 
 #### 开发范式
+- [Claude Code 完整指南（v2.0+）](claude-code-v3-complete-guide.md) - LSP、CLAUDE.md、MCP 完整体系
 - [Claude Code 编程最佳实践](claude-code-best-practices.md)
 - [SPEC 范式编程指南](spec-driven-development.md)
 - [快速参考卡](quick-reference.md)
