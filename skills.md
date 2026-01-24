@@ -1,5 +1,7 @@
 # Claude Skills 使用指南
 
+> 💡 **提示**：本文档提供快速参考。查看完整的 Skills 专区请访问 [skills/](skills/) 目录，包含 Top 10 详细安装指南、社区分类、深度教程等。
+
 Skills 是 Claude 的模块化功能扩展系统，让 Claude 具备专业化的工作能力。
 
 ## 目录
