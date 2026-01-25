@@ -106,7 +106,7 @@ install_skills() {
     print_header "开始安装 Top 10 Skills"
 
     # 创建 skills 目录
-    SKILLS_DIR="$HOME/.config/claude-code/skills"
+    SKILLS_DIR="$HOME/.claude/skills"
     mkdir -p "$SKILLS_DIR"
     cd "$SKILLS_DIR"
 
@@ -343,11 +343,11 @@ show_next_steps() {
     print_header "验证安装"
 
     echo "1️⃣  查看已安装的 Skills："
-    echo "   ${YELLOW}ls -la ~/.config/claude-code/skills/${NC}"
+    echo "   ${YELLOW}ls -la ~/.claude/skills/${NC}"
     echo ""
 
     echo "2️⃣  验证某个 Skill："
-    echo "   ${YELLOW}head ~/.config/claude-code/skills/notebooklm/SKILL.md${NC}"
+    echo "   ${YELLOW}head ~/.claude/skills/notebooklm/SKILL.md${NC}"
     echo ""
 
     echo "3️⃣  启动 Claude Code："
