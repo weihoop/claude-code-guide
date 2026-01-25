@@ -253,7 +253,7 @@ SPEC 范式 → 实战案例 → 真实项目 → 安全手册 → Agent 开发
 |------|---------|------|
 | **Skills 完整指南** | [主页](../skills/) | ⭐ 中英双语索引 |
 | **Top 10 推荐** | [精选](../skills/top-10/) | 详细安装教程 |
-| **社区 Skills** | [分类](../skills/community/) | 8 大类 100+ |
+| **社区 Skills** | [分类](../skills/community/) | 9 大类 100+ |
 | **创建自定义 Skill** | [指南](../skills/guides/creating-custom-skills.md) | 完整教程 |
 | **编程使用** | [SDK](../skills/guides/programming-usage.md) | Python/Node.js |
 | **故障排除** | [FAQ](../skills/guides/troubleshooting.md) | 常见问题 |

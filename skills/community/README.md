@@ -10,6 +10,7 @@
 | 💻 **开发工具** | 30+ | 代码质量、测试、架构、MCP | [查看](development.md) |
 | 📊 **数据分析** | 10+ | CSV 分析、数据库、可视化 | [查看](data-analysis.md) |
 | 💼 **商业营销** | 12+ | 品牌、广告、领英、域名 | [查看](business-marketing.md) |
+| 💬 **沟通写作** | 7+ | NotebookLM、内容创作、会议分析、社交媒体 | [查看](communication.md) |
 | 🎨 **创意媒体** | 10+ | 图片、视频、主题、Canvas | [查看](creative-media.md) |
 | 🗂️ **生产力工具** | 12+ | 文件整理、简历、发票、持续改进 | [查看](productivity.md) |
 | 👥 **协作管理** | 6+ | Git 工作流、代码审查、项目管理 | [查看](collaboration.md) |
@@ -161,7 +162,7 @@ bash ~/claude-code-guide/skills/scripts/install_top10.sh
 ## 📈 统计数据
 
 - **总 Skills 数**: 100+
-- **分类数**: 8 大类
+- **分类数**: 9 大类
 - **官方 Skills**: 4 个（docx、pdf、pptx、xlsx）
 - **社区 Skills**: 96+
 - **维护状态**:
