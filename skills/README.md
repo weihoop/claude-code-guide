@@ -106,6 +106,7 @@ bash scripts/install_top10.sh
 |------|------------|---------|---------|
 | 📄 **文档处理** | 15+ | Word、PDF、Excel、PPT 处理 | [查看](community/document-processing.md) |
 | 💻 **开发工具** | 30+ | 代码质量、测试、架构、MCP | [查看](community/development.md) |
+| ☁️ **AWS 云平台** | 3 | 成本优化、CDK 开发、监控运维 | [查看](community/aws-skills/) |
 | 📊 **数据分析** | 10+ | CSV 分析、数据库、可视化 | [查看](community/data-analysis.md) |
 | 💼 **商业营销** | 12+ | 品牌、广告、领英、域名 | [查看](community/business-marketing.md) |
 | ✍️ **沟通写作** | 8+ | 内容创作、会议分析、研究 | [查看](community/communication-writing.md) |
@@ -370,7 +371,7 @@ head -10 ~/.claude/skills/my-skill/SKILL.md
 
 ---
 
-**最后更新**: 2026-01-24
+**最后更新**: 2026-01-29
 **维护者**: [weihoop](https://github.com/weihoop)
 **反馈**: [GitHub Issues](https://github.com/weihoop/claude-code-guide/issues)
 

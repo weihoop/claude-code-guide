@@ -8,6 +8,7 @@
 |------|------------|---------|---------|
 | 📄 **文档处理** | 15+ | Word、PDF、Excel、PPT、EPUB | [查看](document-processing.md) |
 | 💻 **开发工具** | 30+ | 代码质量、测试、架构、MCP | [查看](development.md) |
+| ☁️ **AWS 云平台** | 3 | 成本优化、CDK 开发、监控运维 | [查看](aws-skills/) |
 | 📊 **数据分析** | 10+ | CSV 分析、数据库、可视化 | [查看](data-analysis.md) |
 | 💼 **商业营销** | 12+ | 品牌、广告、领英、域名 | [查看](business-marketing.md) |
 | 💬 **沟通写作** | 7+ | NotebookLM、内容创作、会议分析、社交媒体 | [查看](communication.md) |
@@ -35,6 +36,11 @@
 - **自动化测试** → [开发工具 - webapp-testing](development.md#测试工具)
 - **代码审查** → [开发工具 - code review skills](development.md#代码质量)
 - **TDD 开发** → [开发工具 - test-driven-development](development.md#开发流程)
+
+#### AWS 云平台
+- **成本优化** → [AWS Skills - aws-cost-ops](aws-skills/#aws-成本运维)
+- **CDK 开发** → [AWS Skills - aws-cdk](aws-skills/#aws-cdk-开发)
+- **监控告警** → [AWS Skills - CloudWatch](aws-skills/aws-cost-ops/references/cloudwatch-alarms.md)
 
 #### 数据处理和分析
 - **CSV 数据分析** → [数据分析 - CSV Data Summarizer](data-analysis.md#精选推荐)
@@ -72,6 +78,14 @@
 | test-driven-development | TDD 开发流程 | ⭐⭐⭐ | 开发工具 |
 | postgres | PostgreSQL 查询 | ⭐⭐ | 数据分析 |
 | D3.js Visualization | 数据可视化 | ⭐⭐⭐ | 数据分析 |
+
+### 运维推荐（AWS 云平台）
+
+| Skill | 用途 | 难度 | 分类 |
+|-------|------|------|------|
+| aws-cost-ops | AWS 成本优化、监控、审计 | ⭐⭐ | AWS 云平台 |
+| aws-cdk | CDK 基础设施即代码 | ⭐⭐⭐ | AWS 云平台 |
+| aws-common | AWS MCP 配置指南 | ⭐ | AWS 云平台 |
 
 ### 创作者推荐（内容创作）
 
@@ -208,6 +222,6 @@ bash ~/claude-code-guide/skills/scripts/update_all_skills.sh
 
 ---
 
-**最后更新**: 2026-01-24
+**最后更新**: 2026-01-29
 **维护者**: [weihoop](https://github.com/weihoop)
 **反馈**: [GitHub Issues](https://github.com/weihoop/claude-code-guide/issues)
