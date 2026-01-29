@@ -2,6 +2,58 @@
 
 宝玉老师出品的 Skill 套件，包含写长文自动配图、自动发帖、发公众号等实用功能。
 
+---
+
+## 命令速查表
+
+### 图片生成类（7个）
+
+| 命令 | 用途 | 触发词 |
+|------|------|--------|
+| `/baoyu-image-gen` | AI 图片生成 | 生成图片、draw |
+| `/baoyu-cover-image` | 文章封面图 | 封面图、cover |
+| `/baoyu-article-illustrator` | 文章配图 | 为文章配图 |
+| `/baoyu-infographic` | 信息图 | 信息图、可视化 |
+| `/baoyu-xhs-images` | 小红书图片 | 小红书图片 |
+| `/baoyu-slide-deck` | PPT 幻灯片 | 幻灯片、PPT |
+| `/baoyu-comic` | 知识漫画 | 知识漫画、教育漫画 |
+
+### 内容转换类（4个）
+
+| 命令 | 用途 | 触发词 |
+|------|------|--------|
+| `/baoyu-url-to-markdown` | 网页转 Markdown | 网页转 markdown |
+| `/baoyu-markdown-to-html` | Markdown 转 HTML | md 转 html |
+| `/baoyu-format-markdown` | 格式化 Markdown | 格式化 markdown |
+| `/baoyu-compress-image` | 压缩图片 | 压缩图片、webp |
+
+### 发布类（2个）
+
+| 命令 | 用途 | 触发词 |
+|------|------|--------|
+| `/baoyu-post-to-wechat` | 发布微信公众号 | 发布公众号 |
+| `/baoyu-post-to-x` | 发布 X/Twitter | 发布 Twitter |
+
+### 高级功能（2个）
+
+| 命令 | 用途 | 触发词 |
+|------|------|--------|
+| `/baoyu-danger-gemini-web` | Gemini Web API | Gemini 生成 |
+| `/baoyu-danger-x-to-markdown` | X 推文转 Markdown | tweet 转 markdown |
+
+### 使用方式
+
+```bash
+# 方式1：直接使用斜杠命令
+/baoyu-image-gen 一只太空猫
+
+# 方式2：自然语言（自动识别触发词）
+帮我生成一张封面图
+为这篇文章配图
+```
+
+---
+
 ## 功能简介
 
 宝玉 Skills 是由 [@JimLiu](https://github.com/JimLiu)（宝玉老师）开发的自媒体创作工具包，覆盖从内容生成到发布的完整流程。
@@ -354,7 +406,7 @@ export TWITTER_ACCESS_SECRET="your-access-secret"
 
 ---
 
-**最后更新**: 2026-01-24
+**最后更新**: 2026-01-29
 **难度**: ⭐⭐ 中等
 **推荐指数**: ⭐⭐⭐⭐
 
