@@ -66,6 +66,31 @@ cd ~/.claude/skills/
 git clone https://github.com/用户名/skill-仓库 skill-名称
 ```
 
+**使用 skills.sh 安装（推荐）**:
+
+[skills.sh](https://skills.sh) 是社区提供的 Skills 发现和安装平台，支持多种 AI Agent。
+
+```bash
+# 安装单个 Skill（交互式选择 Agent）
+npx skills add https://github.com/用户名/skill-仓库 --skill skill-名称
+
+# 直接安装到 Claude Code（非交互式）
+npx skills add https://github.com/用户名/skill-仓库 --skill skill-名称 --agent claude-code --yes
+
+# 从 skills.sh URL 安装（URL 格式：https://skills.sh/用户名/仓库名/skill名）
+npx skills add https://github.com/coreyhaines31/marketingskills --skill seo-audit --agent claude-code -y
+```
+
+**skills.sh 常用参数**:
+| 参数 | 说明 |
+|------|------|
+| `--skill <name>` | 指定要安装的 skill 名称 |
+| `--agent <name>` | 指定目标 Agent（如 `claude-code`、`cursor`、`windsurf`） |
+| `--yes` / `-y` | 跳过交互确认 |
+| `--global` / `-g` | 安装到全局目录 |
+
+**支持的 Agent 列表**: amp, claude-code, cursor, windsurf, cline, codex, gemini-cli, github-copilot 等 39+ 个 Agent。
+
 👉 [查看详细安装指南](installation-guide.md)
 
 ---

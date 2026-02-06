@@ -6,6 +6,7 @@
 
 | Skill | 功能 | 链接 |
 |-------|------|------|
+| **SEO Audit** | SEO 诊断和优化建议，技术 SEO + 页面优化 | [skills.sh](https://skills.sh/coreyhaines31/marketingskills/seo-audit) |
 | **Brand Guidelines** | Anthropic 品牌规范应用 | [GitHub](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/brand-guidelines) |
 | **Lead Research Assistant** | 潜在客户研究和资格审查 | [GitHub](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/lead-research-assistant) |
 | **Content Research Writer** | 高质量内容创作助手 | [GitHub](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/content-research-writer) |
@@ -14,6 +15,20 @@
 ---
 
 ## 📦 完整列表
+
+### SEO 优化
+
+**SEO Audit** ⭐ 新增
+- **功能**: 全面的 SEO 诊断和优化建议
+- **来源**: [skills.sh](https://skills.sh/coreyhaines31/marketingskills/seo-audit)
+- **安装**: `npx skills add https://github.com/coreyhaines31/marketingskills --skill seo-audit --agent claude-code -y`
+- **检查范围**:
+  - **技术 SEO**: robots.txt、XML Sitemap、网站架构、抓取预算
+  - **索引状态**: noindex 检查、canonical 标签、重定向链
+  - **Core Web Vitals**: LCP、INP、CLS 指标
+  - **移动友好性**: 响应式设计、触控目标、视口配置
+  - **页面优化**: Title、Meta Description、Heading 结构、内容优化
+  - **链接建设**: 内链结构、锚文本、权威性分析
 
 ### 品牌管理
 
@@ -63,7 +78,21 @@
 
 ## 💡 使用场景
 
-### 场景 1：品牌一致性
+### 场景 1：SEO 诊断
+
+```
+任务：诊断网站 SEO 问题并提升排名
+
+步骤：
+1. 使用 /seo-audit 触发 skill
+2. 提供网站 URL 和目标关键词
+3. 检查技术 SEO 问题（robots.txt、sitemap）
+4. 审核 Core Web Vitals 指标
+5. 分析页面优化（Title、Meta、Heading）
+6. 获取优先级排序的优化建议
+```
+
+### 场景 2：品牌一致性
 
 ```
 任务：为产品创建营销材料
@@ -156,6 +185,7 @@
 
 ### Skills 仓库
 
+- [seo-audit](https://skills.sh/coreyhaines31/marketingskills/seo-audit) - SEO 诊断和优化（skills.sh）
 - [brand-guidelines](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/brand-guidelines)
 - [competitive-ads-extractor](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/competitive-ads-extractor)
 - [domain-name-brainstormer](https://github.com/ComposioHQ/awesome-claude-skills/tree/main/domain-name-brainstormer)
