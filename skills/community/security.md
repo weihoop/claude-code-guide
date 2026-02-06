@@ -195,6 +195,41 @@ ffuf -w params.txt -u https://example.com/api?FUZZ=test
 
 ---
 
+## 🛡️ AI Agent / Skills 安全扫描
+
+针对 AI Agent 生态的安全扫描工具，防范 prompt injection、恶意 skill 等新型威胁。
+
+> 2026 年 2 月，Snyk 扫描 ClawHub 3,984 个 skill 发现 36% 含 prompt injection；Koi Security 检出 341 个恶意 skill。安装第三方 skill 前务必先做安全扫描。
+
+### Skills 安全工具
+
+| Skill | 功能 | 安装命令 |
+|-------|------|---------|
+| **prompt-guard** | 500+ 攻击模式检测，多语言 prompt injection 防护 | `npx skills add seojoonkim/prompt-guard@prompt-guard -g -y` |
+| **prompt-injection-scanner** | SKILL.md 指令级安全审计，部署前漏洞检测 | `npx skills add jorgealves/agent_skills@prompt-injection-scanner -g -y` |
+| **llm-safety-patterns** | LLM 安全模式检测 | `npx skills add yonatangross/orchestkit@llm-safety-patterns -g -y` |
+
+### 独立安全工具
+
+| 工具 | 来源 | 功能 |
+|------|------|------|
+| **Snyk MCP** | Snyk 官方 | 代码漏洞扫描、skill 安全检测（`npm install -g snyk`） |
+| **Alice Caterpillar** | Alice（开源） | 静态分析 skill 逻辑，发现注入路径和混淆行为 |
+| **VirusTotal Code Insight** | VirusTotal | 上传 skill 包即可分析，已覆盖 3,000+ skill |
+
+### 推荐扫描流程
+
+```
+1. prompt-injection-scanner 扫描 SKILL.md
+2. Snyk MCP 扫描依赖和代码漏洞
+3. prompt-guard 运行时防护
+4. 定期全局安全审计
+```
+
+👉 [查看完整安全工具指南](../../openclaw/openclaw-security-tools.md)
+
+---
+
 ## 📖 参考资料
 
 ### Skills 仓库
@@ -211,6 +246,13 @@ ffuf -w params.txt -u https://example.com/api?FUZZ=test
 - [NIST 取证指南](https://www.nist.gov/digital-forensics)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [FFUF 文档](https://github.com/ffuf/ffuf)
+
+### AI Agent 安全资源
+
+- [Snyk ToxicSkills 研究报告](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/)
+- [341 个恶意 ClawHub Skills](https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html)
+- [OpenClaw 官方安全文档](https://docs.openclaw.ai/gateway/security)
+- [Snyk MCP 官方文档](https://docs.snyk.io/cli-ide-and-ci-cd-integrations/snyk-cli/developer-guardrails-for-agentic-workflows/snyk-mcp-early-access)
 
 ### 认证和培训
 

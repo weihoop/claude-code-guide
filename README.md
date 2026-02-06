@@ -264,6 +264,17 @@ bash install_top10.sh
 
 ---
 
+## 🦞 OpenClaw 专区
+
+OpenClaw（原 Clawdbot）命令行指令整理和安全工具指南。
+
+| 文档 | 说明 |
+|------|------|
+| [命令行指令指南](openclaw/openclaw-guide-formatted.md) | 从基础控制到故障排查的完整命令速查 |
+| [Skills 安全扫描工具](openclaw/openclaw-security-tools.md) | Snyk MCP、prompt-guard 等安全工具安装和使用 |
+
+---
+
 ## ⚙️ 配置指南
 
 ### 全局配置文件
