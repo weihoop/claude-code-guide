@@ -1,0 +1,69 @@
+{
+  "_comment": "银行卡数据模板文件。将此文件复制后手工填写实际数据，或由 parse_bank_card.py 自动生成。使用时删除所有 _comment 字段。",
+  "type": "bank_card",
+  "source": "银行卡账户历史明细清单",
+  "card_name": "借记卡2306",
+  "card_number": "xxxxxxxxxxxx2306",
+  "holder": "李红霞",
+  "branch": "安阳内黄新区支行",
+  "period": {
+    "start": "2023-01-01",
+    "end": "2023-12-31"
+  },
+  "_comment_transactions": "transactions: amount 负值=支出，正值=收入。type=交易类型，description=附加说明",
+  "transactions": [
+    {
+      "date": "2023-03-15",
+      "amount": -800.00,
+      "type": "ATM取款",
+      "description": "本人取款"
+    },
+    {
+      "date": "2023-04-01",
+      "amount": 5500.00,
+      "type": "工资",
+      "description": "单位工资"
+    },
+    {
+      "date": "2023-04-10",
+      "amount": -368.50,
+      "type": "消费",
+      "description": "超市购物"
+    },
+    {
+      "date": "2023-05-20",
+      "amount": -2000.00,
+      "type": "转账",
+      "description": "转给张某某"
+    },
+    {
+      "date": "2023-06-08",
+      "amount": 199.00,
+      "type": "退款",
+      "description": "商户退款"
+    }
+  ],
+  "_comment_page_totals": "page_totals: 银行清单各页底部汇总（权威数据）。如无分页合计可删除此字段或设为 null。expense/income 均为正数。",
+  "page_totals": {
+    "expense": 23157.89,
+    "income": 5532.45,
+    "_comment_pages": "pages: 各页明细，用于 Excel 分页汇总表。按 PDF 实际页数填写。",
+    "pages": [
+      {
+        "name": "第1页",
+        "expense": 8500.00,
+        "income": 5500.00
+      },
+      {
+        "name": "第2页",
+        "expense": 9657.89,
+        "income": 32.45
+      },
+      {
+        "name": "第3页",
+        "expense": 5000.00,
+        "income": 0.00
+      }
+    ]
+  }
+}

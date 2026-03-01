@@ -1,0 +1,12 @@
+# 案例数据大文件（共约 54MB）
+# 这些文件需要单独从案例PDF中提取生成，不纳入版本控制
+shared/references/案例索引.json
+shared/references/案例索引-2024.json
+shared/references/案例索引-2025.json
+shared/references/案例全文/
+
+# 生成的报告文件
+*.html
+
+# macOS
+.DS_Store

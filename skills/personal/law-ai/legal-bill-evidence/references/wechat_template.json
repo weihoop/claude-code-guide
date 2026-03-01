@@ -1,0 +1,68 @@
+{
+  "_comment": "微信支付数据模板文件。通常由 parse_wechat.py 自动生成，也可手工填写。使用时删除所有 _comment 字段。",
+  "type": "wechat",
+  "source": "微信支付交易明细证明",
+  "holder": "张三",
+  "account": "wxid_xxxxxxxxxxxxxxx",
+  "period": {
+    "start": "2023-01-01",
+    "end": "2023-12-31"
+  },
+  "_comment_transactions": "direction: 支出/收入/其他。payment: 零钱/工商银行储蓄卡(2306)等。amount: 正数。counterparty: 交易对方名称。",
+  "transactions": [
+    {
+      "date": "2023-03-15",
+      "time": "14:30:00",
+      "type": "商户消费",
+      "direction": "支出",
+      "payment": "零钱",
+      "amount": 98.00,
+      "counterparty": "某某超市"
+    },
+    {
+      "date": "2023-04-10",
+      "time": "09:15:22",
+      "type": "扫二维码付款",
+      "direction": "支出",
+      "payment": "工商银行储蓄卡(2306)",
+      "amount": 368.50,
+      "counterparty": "便利店"
+    },
+    {
+      "date": "2023-05-20",
+      "time": "18:00:00",
+      "type": "转账",
+      "direction": "支出",
+      "payment": "零钱",
+      "amount": 2000.00,
+      "counterparty": "李四"
+    },
+    {
+      "date": "2023-06-01",
+      "time": "10:00:00",
+      "type": "转账",
+      "direction": "收入",
+      "payment": "/",
+      "amount": 500.00,
+      "counterparty": "王五"
+    },
+    {
+      "date": "2023-07-08",
+      "time": "11:30:45",
+      "type": "退款",
+      "direction": "收入",
+      "payment": "/",
+      "amount": 199.00,
+      "counterparty": "京东商城"
+    },
+    {
+      "date": "2023-08-15",
+      "time": "16:20:00",
+      "type": "零钱提现",
+      "direction": "其他",
+      "payment": "工商银行储蓄卡(2306)",
+      "amount": 1000.00,
+      "counterparty": ""
+    }
+  ]
+}
