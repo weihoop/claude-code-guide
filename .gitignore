@@ -1,7 +1,6 @@
 # Claude Code 配置文件
 .claude/
 .claude.md
-CLAUDE.md
 .claude/settings.local.json
 
 # IDE和编辑器
