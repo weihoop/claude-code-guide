@@ -178,6 +178,7 @@ Anthropic 官方发布的文档处理套件，质量保证。
 | [编程使用 Skills](guides/programming-usage.md) | Python/Node.js SDK 使用 | 开发者 |
 | [Skills vs MCP vs Commands](guides/skills-vs-mcp-vs-commands.md) | 三种扩展方式对比和选择 | 架构师 |
 | [最佳实践](guides/best-practices.md) | Skill 设计和优化技巧 | 高级用户 |
+| [多 Skill 串联工作流](guides/multi-skill-workflow.md) | 消除确认提示、自动串联多个 Skill | 所有用户 |
 | [故障排除](guides/troubleshooting.md) | 常见问题解决方案 | 所有用户 |
 
 ---
