@@ -217,7 +217,12 @@ command
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(find:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(cd:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(pip3:*)",
+      "Bash(open:*)"
     ],
     "ask": [
       "Edit(/docs/**)",
