@@ -2,6 +2,78 @@
 
 30+ 专业开发工具，涵盖代码质量、测试、架构设计、MCP 集成等方面。
 
+## 全栈开发必备清单（Node.js + React + PostgreSQL 技术栈）
+
+针对 **前端（React / React Native / Next.js）+ 后端（Node.js）+ 数据库（PostgreSQL / Supabase / MariaDB）** 技术栈的精选推荐，共 15 个 skill。
+
+一键安装：
+```bash
+npx skills add anthropics/skills@frontend-design -g -y && \
+npx skills add vercel-labs/agent-skills@vercel-react-best-practices -g -y && \
+npx skills add vercel-labs/agent-skills@vercel-react-native-skills -g -y && \
+npx skills add callstackincubator/agent-skills@react-native-best-practices -g -y && \
+npx skills add wshobson/agents@nextjs-app-router-patterns -g -y && \
+npx skills add anthropics/skills@webapp-testing -g -y && \
+npx skills add wshobson/agents@nodejs-backend-patterns -g -y && \
+npx skills add neondatabase/agent-skills@neon-postgres -g -y && \
+npx skills add wshobson/agents@database-migration -g -y && \
+npx skills add better-auth/skills@better-auth-best-practices -g -y && \
+npx skills add affaan-m/everything-claude-code@security-review -g -y && \
+npx skills add wshobson/agents@security-requirement-extraction -g -y && \
+npx skills add useai-pro/openclaw-skills-security@skill-vetter -g -y && \
+npx skills add firebase/agent-skills@firebase-auth-basics -g -y && \
+npx skills add firebase/agent-skills@firebase-security-rules-auditor -g -y
+```
+
+### 前端
+
+| Skill | 安装量 | 用途 | 安装命令 |
+|-------|--------|------|---------|
+| `frontend-design` | 496K | 前端设计规范（Anthropic 官方） | `npx skills add anthropics/skills@frontend-design -g -y` |
+| `vercel-react-best-practices` | 447K | React 最佳实践（Vercel 官方） | `npx skills add vercel-labs/agent-skills@vercel-react-best-practices -g -y` |
+| `vercel-react-native-skills` | 133K | React Native 最佳实践（Vercel） | `npx skills add vercel-labs/agent-skills@vercel-react-native-skills -g -y` |
+| `react-native-best-practices` | 16K | React Native 最佳实践（Callstack） | `npx skills add callstackincubator/agent-skills@react-native-best-practices -g -y` |
+| `nextjs-app-router-patterns` | 20K | Next.js App Router 模式 | `npx skills add wshobson/agents@nextjs-app-router-patterns -g -y` |
+
+### 测试
+
+| Skill | 安装量 | 用途 | 安装命令 |
+|-------|--------|------|---------|
+| `webapp-testing` | 87K | Web 应用测试（Anthropic 官方） | `npx skills add anthropics/skills@webapp-testing -g -y` |
+
+### 后端
+
+| Skill | 安装量 | 用途 | 安装命令 |
+|-------|--------|------|---------|
+| `nodejs-backend-patterns` | 35K | Node.js 后端设计模式 | `npx skills add wshobson/agents@nodejs-backend-patterns -g -y` |
+
+### 数据库
+
+| Skill | 安装量 | 用途 | 安装命令 |
+|-------|--------|------|---------|
+| `neon-postgres` | 39K | PostgreSQL / Supabase 开发规范 | `npx skills add neondatabase/agent-skills@neon-postgres -g -y` |
+| `database-migration` | 13K | 数据库迁移（PostgreSQL / MariaDB 通用） | `npx skills add wshobson/agents@database-migration -g -y` |
+
+### 认证
+
+| Skill | 安装量 | 用途 | 安装命令 |
+|-------|--------|------|---------|
+| `better-auth-best-practices` | 56K | 认证最佳实践（框架无关） | `npx skills add better-auth/skills@better-auth-best-practices -g -y` |
+| `firebase-auth-basics` | 71K | Firebase Auth（移动端 / React Native） | `npx skills add firebase/agent-skills@firebase-auth-basics -g -y` |
+
+### 安全
+
+| Skill | 安装量 | 用途 | 安装命令 |
+|-------|--------|------|---------|
+| `security-review` | 9.6K | 代码安全审查 | `npx skills add affaan-m/everything-claude-code@security-review -g -y` |
+| `security-requirement-extraction` | 14K | 从需求中识别安全点 | `npx skills add wshobson/agents@security-requirement-extraction -g -y` |
+| `skill-vetter` | 19K | 审核已安装 skill 的质量和安全性 | `npx skills add useai-pro/openclaw-skills-security@skill-vetter -g -y` |
+| `firebase-security-rules-auditor` | 36K | Firebase 安全规则审计 | `npx skills add firebase/agent-skills@firebase-security-rules-auditor -g -y` |
+
+> 安全说明：以上所有 skill 均通过 Gen / Socket / Snyk 三重安全评估，均为 Safe / 0 alerts，部分为 Med Risk（依赖链评分，非 skill 本身漏洞），来源均为知名官方团队。
+
+---
+
 ## 🌟 精选推荐
 
 | Skill | 功能 | 维护者 | 链接 |
