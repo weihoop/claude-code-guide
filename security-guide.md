@@ -233,6 +233,76 @@ process.exit(0);  // 允许操作
 }
 ```
 
+### 4.1 远程命令防火 Hook（sshpass / ssh）
+
+**场景**：在自动接受模式（`acceptEdits`）下，`sshpass -p 密码 ssh host "..."` 这类命令会无提示执行。一旦远程命令里藏了 `rm -rf`、`mkfs`、关机等破坏性操作，后果不可逆。
+
+**为什么不用 `deny` 权限规则**：Claude Code 的 Bash 权限匹配以**前缀匹配**为主，`Bash(sshpass *rm -rf*)` 这种"中段通配 + 关键词"对藏在远程引号字符串里的命令**不保证命中**。可靠做法是用 **PreToolUse hook**——在命令执行前对**命令全文**跑正则，命中即拦（`exit 2`）。
+
+> 关键点：现代 hook 从 **stdin 读 JSON**（不是老文档里的 `process.env.TOOL_ARGS`），字段为 `tool_name` / `tool_input.command`；`exit 2` 表示阻断并把 stderr 反馈给 Claude，`exit 0` 放行。
+
+脚本 `~/.claude/hooks/sshpass-firewall.py`（完整版见 `config-templates/hooks/`）：
+
+```python
+#!/usr/bin/env python3
+"""sshpass 防火 hook：拦截通过 sshpass 远程执行的破坏性命令。"""
+import json, re, sys
+
+DANGER_PATTERNS = [
+    r"rm\s+-[rf]{1,2}\b",   r"\bmkfs\b",     r"\bdd\s+(if|of)=",
+    r"\bshutdown\b",        r"\breboot\b",   r"\bpoweroff\b",
+    r"\bhalt\b",            r">\s*/dev/sd[a-z]",
+]
+
+def main():
+    try:
+        data = json.load(sys.stdin)
+    except Exception:
+        sys.exit(0)                       # 解析失败放行，避免误伤
+    if data.get("tool_name") != "Bash":
+        sys.exit(0)
+    cmd = data.get("tool_input", {}).get("command", "")
+    if "sshpass" not in cmd:
+        sys.exit(0)
+    for pat in DANGER_PATTERNS:
+        if re.search(pat, cmd, re.IGNORECASE):
+            print(f"[sshpass 防火] 已拦截破坏性命令（匹配 /{pat}/）。"
+                  f"如确需执行请手动在终端运行。", file=sys.stderr)
+            sys.exit(2)                   # exit 2 = 阻断
+    sys.exit(0)
+
+if __name__ == "__main__":
+    main()
+```
+
+**配置（全局 `~/.claude/settings.json`）**：用 `if` 条件让 hook 只对 sshpass 命令触发，不拖累其他命令：
+
+```json
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": ["Bash(sshpass:*)"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command",
+            "command": "python3 ~/.claude/hooks/sshpass-firewall.py",
+            "if": "Bash(sshpass *)" }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**要点**：
+- hook 在 `~/.claude/` 下，**不进 git、不随仓库同步**——换机器要重新部署（这正是把它沉淀进本指南的原因）。
+- 该思路通用：把 `sshpass` 换成任何高危命令前缀、调整 `DANGER_PATTERNS` 即可复用。
+- `defaultMode: acceptEdits` 减少手动确认，但它**只自动接受已 allow 的命令和文件编辑**，不放行未知危险命令；hook 是第二道兜底。
+
 ### 5. 密钥轮换策略
 
 **定期轮换密钥**：
